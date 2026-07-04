@@ -11,7 +11,7 @@ const items = [
   'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   '软件著作权 40+',
   <div key="4" className="text-2xl font-bold">ACM-ICPC 区域赛</div>,
-  '校企合作项目 15+',
+  '！！！这里都是占位符！！！',
   <div key="5" className="text-2xl font-bold">互联网+ 省赛一等奖</div>,
   'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   '毕业生去向：大厂 80%',
@@ -38,7 +38,7 @@ export default function Achievements() {
       </div>
       <GridMotion
         items={items}
-        gradientColor="#5227FF"
+        gradientColor="#f3f4f6"
       />
     </section>
   )
