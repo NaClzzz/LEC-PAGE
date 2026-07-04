@@ -1,16 +1,21 @@
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+
 export default function App() {
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="h-screen bg-[#EFEFEF]" />
+      <Navbar />
+      <section id="hero">
+        <Hero />
+      </section>
       {/* About */}
-      <section className="h-[600px] bg-[#F5F5F5]" />
+      <section id="about" className="h-[600px] bg-[#F5F5F5]" />
       {/* Achievements */}
-      <section className="h-[600px] bg-[#EAEAEA]" />
+      <section id="achievements" className="h-[600px] bg-[#EAEAEA]" />
       {/* Directions */}
-      <section className="h-[600px] bg-[#E0E0E0]" />
-      {/* RecruitInfo */}
-      <section className="h-[600px] bg-[#D6D6D6]" />
+      <section id="directions" className="h-[600px] bg-[#E0E0E0]" />
+      {/* Recruit */}
+      <section id="recruit" className="h-[600px] bg-[#D6D6D6]" />
       {/* Footer */}
       <section className="h-[300px] bg-[#CCCCCC]" />
     </div>

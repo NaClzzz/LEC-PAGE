@@ -1,1 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mi+Sans&display=swap');
 @import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Mi Sans', sans-serif;
+}
