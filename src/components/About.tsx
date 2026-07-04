@@ -29,28 +29,25 @@ export default function About() {
               乐程软件工作室自 2010 年 6 月创立以来，已在软件开发和作品开发领域深耕了十余年。我们是学生科研领域的佼佼者，专注于软件、网站和作品开发，技术方向广泛，涵盖泛前后端开发、算法竞赛、机器学习、游戏开发等多个领域。<br /><br />
               目前，工作室拥有 40 余名成员，大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。
             </p>
-            <div className="inline-flex items-center gap-2 bg-[#F26522] text-white rounded-full px-6 py-3 text-sm font-medium self-end">
+            <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end">
               <span>About our studio</span>
               <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-45">
-                <span className="text-[#F26522] text-xs font-bold">&rarr;</span>
+                <span className="text-[#5227FF] text-xs font-bold">&rarr;</span>
               </span>
             </div>
-            <div className="relative isolate">
-              <div className="absolute -top-10 -right-10 w-36 h-28 sm:w-50 sm:h-80 bg-[#5227FF] -z-10" />
-              <div className="aspect-[3/2] rounded-xl sm:rounded-2xl">
-                <TiltedCard
-                  imageSrc="/about1.jpg"
-                  altText="About LEC Studio"
-                  containerHeight="100%"
-                  containerWidth="100%"
-                  imageHeight="100%"
-                  imageWidth="100%"
-                  rotateAmplitude={12}
-                  scaleOnHover={1.05}
-                  showMobileWarning={false}
-                  showTooltip={false}
-                />
-              </div>
+            <div className="aspect-[3/2] rounded-xl sm:rounded-2xl">
+              <TiltedCard
+                imageSrc="/about1.jpg"
+                altText="About LEC Studio"
+                containerHeight="100%"
+                containerWidth="100%"
+                imageHeight="100%"
+                imageWidth="100%"
+                rotateAmplitude={12}
+                scaleOnHover={1.05}
+                showMobileWarning={false}
+                showTooltip={false}
+              />
             </div>
           </div>
 
@@ -61,29 +58,26 @@ export default function About() {
                 乐程软件工作室自 2010 年 6 月创立以来，已在软件开发和作品开发领域深耕了十余年。我们是学生科研领域的佼佼者，致力于多方向的技术学习与人才培养，涵盖前后端开发、算法竞赛、机器学习、游戏开发等多个领域。<br /><br />
                 目前，工作室拥有 40 余名成员，大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。
               </p>
-              <div className="inline-flex items-center gap-2 bg-gray-900 text-white rounded-full px-6 py-3 text-sm font-medium self-end mt-6">
+              <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end mt-6">
                 <span>ABOUT US</span>
                 <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-45">
-                  <span className="text-gray-900 text-xs font-bold">&rarr;</span>
+                  <span className="text-[#5227FF] text-xs font-bold">&rarr;</span>
                 </span>
               </div>
             </div>
-            <div className="relative isolate">
-              <div className="absolute -top-10 -right-10 w-36 h-28 sm:w-50 sm:h-80 bg-[#5227FF] -z-10" />
-              <div className="aspect-[3/2] rounded-2xl">
-                <TiltedCard
-                  imageSrc="/about1.jpg"
-                  altText="About LEC Studio"
-                  containerHeight="100%"
-                  containerWidth="100%"
-                  imageHeight="100%"
-                  imageWidth="100%"
-                  rotateAmplitude={12}
-                  scaleOnHover={1.05}
-                  showMobileWarning={false}
-                  showTooltip={false}
-                />
-              </div>
+            <div className="aspect-[3/2] rounded-2xl">
+              <TiltedCard
+                imageSrc="/about1.jpg"
+                altText="About LEC Studio"
+                containerHeight="100%"
+                containerWidth="100%"
+                imageHeight="100%"
+                imageWidth="100%"
+                rotateAmplitude={12}
+                scaleOnHover={1.05}
+                showMobileWarning={false}
+                showTooltip={false}
+              />
             </div>
           </div>
         </div>
