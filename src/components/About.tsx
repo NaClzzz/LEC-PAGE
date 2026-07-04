@@ -2,7 +2,15 @@ import TiltedCard from './TiltedCard'
 
 export default function About() {
   return (
-    <section id="about" className="bg-white pt-16 sm:pt-20 lg:pt-52 pb-16 sm:pb-20 lg:pb-44 overflow-hidden">
+    <section id="about" className="bg-white pt-16 sm:pt-20 lg:pt-52 pb-16 sm:pb-20 lg:pb-44 overflow-hidden"
+      style={{
+        backgroundImage: `
+          linear-gradient(to right, rgba(137, 137, 137, 0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(137, 137, 137, 0.1) 1px, transparent 1px)
+        `,
+        backgroundSize: '90px 90px'
+      }}
+    >
       <div className="max-w-[1440px] mx-auto">
         {/* Badge row */}
         <div className="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">

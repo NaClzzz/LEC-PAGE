@@ -2,10 +2,19 @@ import Lanyard from './Lanyard'
 
 export default function Recruit() {
   return (
-    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-16 sm:pb-20 lg:pb-44 overflow-hidden relative">
+    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-16 sm:pb-20 lg:pb-44 overflow-hidden relative"
+      style={{
+        backgroundImage: `
+          linear-gradient(to right, rgba(137, 137, 137, 0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(137, 137, 137, 0.1) 1px, transparent 1px)
+        `,
+        backgroundPosition: '0 25px',
+        backgroundSize: '90px 90px'
+      }}
+    >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-180px)]">
         <Lanyard position={[0, 0, 26]} gravity={[0, -40, 0]} />
-        <p className="absolute bottom-60 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
+        <p className="absolute bottom-70 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
       <div className="max-w-[1440px] mx-auto">
         <div className="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">
