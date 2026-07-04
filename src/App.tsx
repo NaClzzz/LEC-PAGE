@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
 
 export default function App() {
   return (
@@ -8,8 +9,7 @@ export default function App() {
       <section id="hero">
         <Hero />
       </section>
-      {/* About */}
-      <section id="about" className="h-[600px] bg-[#F5F5F5]" />
+      <About />
       {/* Achievements */}
       <section id="achievements" className="h-[600px] bg-[#EAEAEA]" />
       {/* Directions */}
