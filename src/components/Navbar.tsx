@@ -20,6 +20,8 @@ export default function Navbar() {
       socialItems={socialItems}
       displaySocials
       displayItemNumbering
+      logoUrl="/favicon.svg"
+      logoText="乐程软件工作室"
       menuButtonColor="#111827"
       openMenuButtonColor="#111827"
       changeMenuColorOnOpen={true}
