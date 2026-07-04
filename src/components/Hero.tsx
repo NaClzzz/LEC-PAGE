@@ -15,7 +15,7 @@ export default function Hero() {
           乐程软件工作室
         </span>
         <p className="text-[13px] font-medium sm:text-[14px] text-gray-900 tracking-wide mt-3">
-          &lt;JOIN US/&gt;
+          &lt; JOIN US /&gt;
         </p>
       </div>
 
