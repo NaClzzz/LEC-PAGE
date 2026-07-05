@@ -8,3 +8,19 @@ html, body, #root {
 body {
   font-family: 'MiSans Medium', 'MiSans', sans-serif;
 }
+
+@media (max-width: 1024px) {
+  .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img {
+    filter: none !important;
+  }
+  .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-text {
+    color: #111827 !important;
+  }
+  .sm-scope .sm-panel-item {
+    font-size: 2.2rem !important;
+  }
+  .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after {
+    right: 2.2em !important;
+    font-size: 12px !important;
+  }
+}

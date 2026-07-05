@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import StaggeredMenu from './ui/StaggeredMenu'
 
 const menuItems = [
@@ -14,6 +15,14 @@ const socialItems = [
 
 export default function Navbar() {
   const base = import.meta.env.BASE_URL
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024)
+
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth < 1024)
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
   return (
     <StaggeredMenu
       position="right"
@@ -25,7 +34,7 @@ export default function Navbar() {
       logoText="乐程软件工作室"
       menuButtonColor="#111827"
       openMenuButtonColor="#111827"
-      changeMenuColorOnOpen={true}
+      changeMenuColorOnOpen={!isMobile}
       colors={['#B497CF', '#5227FF']}
       accentColor="#5227FF"
       isFixed
