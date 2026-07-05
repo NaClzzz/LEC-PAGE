@@ -32,17 +32,18 @@ export default function About() {
         {/* Heading */}
         <div className="px-5 sm:px-8 lg:px-12">
           <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-10 sm:mb-14 lg:mb-20">
-            乐程，一个有付泽东的软件工作室
+            乐程，乐在探索，程向未来
           </h2>
         </div>
 
         {/* Content area */}
-        <div className="px-5 sm:px-8 lg:px-12">
+        <div className="px-5 sm:px-8 lg:px-12 -translate-y-[10px]">
           {/* Mobile / Tablet */}
           <div className="lg:hidden flex flex-col gap-6 sm:gap-8">
             <p className="text-[15px] sm:text-[17px] leading-[1.6] font-medium text-gray-900">
-              乐程软件工作室自 2010 年 6 月创立以来，已在软件开发和作品开发领域深耕了十余年。我们是学生科研领域的佼佼者，专注于软件、网站和作品开发，技术方向广泛，涵盖泛前后端开发、算法竞赛、机器学习、游戏开发等多个领域。<br /><br />
-              目前，工作室拥有 40 余名成员，大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。
+              乐程软件工作室自 2010 年 6 月创立以来，已在软件开发和作品开发领域深耕了十余年。我们是学生科研领域的佼佼者，致力于多方向的技术学习与人才培养，涵盖前后端开发、算法竞赛、机器学习、游戏开发等多个领域。<br /><br />
+              团队目前有成员30余人，采取每周28小时考勤制度，定期开展例会和学习交流促进团队发展，形成良好学风。同时也积极组织参与各级别比赛，团队项目曾多次成功获学院立项，更获省、国赛奖项十余项。大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。<br /><br />
+              通过乐程的学习与培养，部分成员保研至电子科大、川大等知名大学继续深造。也有部分成员就职于字节、腾讯、阿里、美团等互联网行业领军企业。我们将本着"学以致用，服务学校，走向社会"的宗旨，用优秀的软件和细致的服务为我们的数字化生活提供便利，也为团队和每位成员带来更好的学习空间与成长机会。
             </p>
             <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end">
               <span>DRUG IT</span>
@@ -65,10 +66,11 @@ export default function About() {
           {/* Desktop */}
           <div className="hidden lg:grid grid-cols-[1fr_48%] gap-6 xl:gap-8 items-stretch">
             <div className="flex flex-col justify-between">
-              <p className="text-[16px] sm:text-[18px] leading-[1.65] font-medium text-gray-900">
-                乐程软件工作室自 2010 年 6 月创立以来，已在软件开发和作品开发领域深耕了十余年。我们是学生科研领域的佼佼者，致力于多方向的技术学习与人才培养，涵盖前后端开发、算法竞赛、机器学习、游戏开发等多个领域。<br /><br />
-                目前，工作室拥有 40 余名成员，大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。
-              </p>
+<p className="text-[16px] sm:text-[18px] leading-[1.65] font-medium text-gray-900">
+              乐程软件工作室自 2010 年 6 月创立以来，已在软件开发和作品开发领域深耕了十余年。我们是学生科研领域的佼佼者，致力于多方向的技术学习与人才培养，涵盖前后端开发、算法竞赛、机器学习、游戏开发等多个领域。<br /><br />
+              团队目前有成员30余人，采取每周28小时考勤制度，定期开展例会和学习交流促进团队发展，形成良好学风。同时也积极组织参与各级别比赛，团队项目曾多次成功获学院立项，更获省、国赛奖项十余项。大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。<br /><br />
+              通过乐程的学习与培养，部分成员保研至电子科大、川大等知名大学继续深造。也有部分成员就职于字节、腾讯、阿里、美团等互联网行业领军企业。我们将本着"学以致用，服务学校，走向社会"的宗旨，用优秀的软件和细致的服务为我们的数字化生活提供便利，也为团队和每位成员带来更好的学习空间与成长机会。
+            </p>
               <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end mt-6">
                 <span>DRUG IT</span>
                 <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-45">
@@ -76,7 +78,7 @@ export default function About() {
                 </span>
               </div>
             </div>
-            <div className="aspect-[3/2] rounded-2xl translate-x-[10px] -translate-y-[20px]">
+            <div className="aspect-[3/2] rounded-2xl translate-x-[10px] -translate-y-[5px]">
               <Stack
                 randomRotation={true}
                 sensitivity={180}
