@@ -56,6 +56,7 @@ export default function ScrollSnap({ children }: ScrollSnapProps) {
     }
 
     function handleWheel(e: WheelEvent) {
+      if (window.innerWidth < 1024) return
       if (scrollingRef.current) { e.preventDefault(); return }
       e.preventDefault()
 

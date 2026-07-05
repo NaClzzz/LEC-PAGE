@@ -26,8 +26,9 @@ export default function Hero() {
           LEC SOFTWARE STUDIO
         </p>
 
-        <h1 className="text-[clamp(2.5rem,10vw,7rem)] font-medium leading-[1.08] tracking-tight text-gray-900 whitespace-pre-line">
-          {'加入我们\n一起用代码创造{世界}'}
+        <h1 className="text-[clamp(2.5rem,10vw,7rem)] font-medium leading-[1.08] tracking-tight text-gray-900">
+          加入我们<br />
+          一起用代码创造<br className="sm:hidden" />{'{世界}'}
         </h1>
       </div>
     </section>
