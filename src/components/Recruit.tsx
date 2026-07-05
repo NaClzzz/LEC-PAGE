@@ -2,7 +2,7 @@ import Lanyard from './Lanyard'
 
 export default function Recruit() {
   return (
-    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-16 sm:pb-20 lg:pb-44 overflow-hidden relative"
+    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-12 sm:pb-16 lg:pb-24 overflow-hidden relative"
       style={{
         backgroundImage: `
           linear-gradient(to right, rgba(137, 137, 137, 0.1) 1px, transparent 1px),
@@ -12,9 +12,9 @@ export default function Recruit() {
         backgroundSize: '90px 90px'
       }}
     >
-<div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-180px)]">
-        <Lanyard position={[0, 0, 26]} gravity={[0, -40, 0]} />
-        <p className="absolute bottom-70 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
+<div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
+        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
       <div className="max-w-[1440px] mx-auto">
         <div className="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">
@@ -51,12 +51,12 @@ export default function Recruit() {
               地址：待定
             </p>
           </div>
-          <div className="hidden lg:block h-[30vh]"></div>
+          <div className="hidden lg:block h-[15vh]"></div>
         </div>
       </div>
-      <div className="lg:hidden h-[60vh] relative [transform:translateY(40px)]">
-        <Lanyard position={[0, 0, 26]} gravity={[0, -40, 0]} />
-        <p className="absolute bottom-32 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
+      <div className="lg:hidden h-[40vh] relative [transform:translateY(40px)]">
+        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        <p className="absolute bottom-12 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
     </section>
   )
