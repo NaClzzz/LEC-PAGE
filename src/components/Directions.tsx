@@ -58,7 +58,7 @@ const items: DirectionItem[] = [
 const menuProps = {
   textColor: '#111827',
   bgColor: '#f3f4f6',
-  marqueeBgColor: '#1b1b1b',
+  marqueeBgColor: '#5227ff',
   marqueeTextColor: '#ffffff',
   borderColor: '#d1d5db',
 } as const
@@ -113,10 +113,10 @@ export default function Directions() {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center z-10 transition-colors"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center z-10 transition-colors"
               onClick={handleClose}
             >
-              <X size={16} className="text-gray-600" />
+              <X size={20} className="text-[#111827]" />
             </button>
 
             <div className="flex-1 flex flex-col justify-center p-8 sm:p-12">
@@ -126,7 +126,7 @@ export default function Directions() {
               <p className="text-[15px] sm:text-[17px] leading-[1.65] font-medium text-gray-900" dangerouslySetInnerHTML={{ __html: selectedItem.description }} />
             </div>
 
-            <div className="hidden sm:block w-[30%] bg-[#f3f4f6] rounded-r-2xl ml-auto" />
+            <div className="hidden sm:block w-[30%] bg-[#f3f4f6] ml-auto" />
           </div>
         </div>
       )}
