@@ -112,7 +112,7 @@ export default function Directions() {
       {selectedItem && (
         <div className="fixed inset-0 z-50 flex items-center justify-center" onClick={handleClose}>
           <div
-            className={`bg-white rounded-xl shadow-lg overflow-hidden flex w-[90vw] max-w-[1000px] h-[70vh] max-h-[700px] relative ${closing ? 'animate-[slideOutLeft_0.5s_cubic-bezier(0.4,0,0.2,1)]' : 'animate-[slideInRight_0.8s_cubic-bezier(0.16,1,0.3,1)]'}`}
+            className={`bg-white rounded-xl shadow-lg overflow-hidden flex w-[90vw] max-w-[1000px] h-auto max-h-[85vh] lg:h-[70vh] lg:max-h-[700px] relative ${closing ? 'animate-[slideOutLeft_0.5s_cubic-bezier(0.4,0,0.2,1)]' : 'animate-[slideInRight_0.8s_cubic-bezier(0.16,1,0.3,1)]'}`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -122,7 +122,7 @@ export default function Directions() {
               <X size={20} className="text-[#111827]" />
             </button>
 
-            <div className="flex-1 flex flex-col justify-center p-8 sm:p-12 overflow-y-auto lg:justify-center">
+            <div className="flex-1 flex flex-col justify-center p-8 sm:p-12">
               <h3 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-4">
                 {selectedItem.text}
               </h3>
