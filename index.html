@@ -5,53 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>乐程软件工作室 — LEC Software Studio</title>
-    <style>
-      #loading-screen {
-        position: fixed;
-        inset: 0;
-        z-index: 99999;
-        background: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 0.6s ease;
-      }
-      #loading-screen.fade-out {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .loading-bar {
-        width: 160px;
-        height: 3px;
-        background: #e5e7eb;
-        border-radius: 2px;
-        overflow: hidden;
-      }
-      .loading-bar-fill {
-        height: 100%;
-        width: 0%;
-        background: #111827;
-        border-radius: 2px;
-        transition: width 0.8s ease;
-      }
-      .loading-text {
-        margin-top: 12px;
-        font-size: 12px;
-        color: #9ca3af;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        letter-spacing: 0.15em;
-        text-transform: lowercase;
-      }
-      </style>
   </head>
   <body>
-    <div id="loading-screen">
-      <div class="loading-bar">
-        <div class="loading-bar-fill"></div>
-      </div>
-      <p class="loading-text">loading</p>
-    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
