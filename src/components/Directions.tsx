@@ -122,7 +122,7 @@ export default function Directions() {
               <X size={20} className="text-[#111827]" />
             </button>
 
-            <div className="flex-1 flex flex-col justify-center p-8 sm:p-12">
+            <div className="flex-1 flex flex-col justify-center p-8 sm:p-12 overflow-y-auto lg:justify-center">
               <h3 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-4">
                 {selectedItem.text}
               </h3>
