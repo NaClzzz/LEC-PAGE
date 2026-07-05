@@ -12,7 +12,9 @@ export default function App() {
     const fill = document.querySelector('.loading-bar-fill') as HTMLElement
 
     requestAnimationFrame(() => {
-      if (fill) fill.style.width = '55%'
+      requestAnimationFrame(() => {
+        if (fill) fill.style.width = '55%'
+      })
     })
 
     const minTime = new Promise<void>(r => setTimeout(r, 2000))
