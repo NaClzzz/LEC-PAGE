@@ -33,7 +33,16 @@
         width: 0%;
         background: #111827;
         border-radius: 2px;
-        transition: width 0.8s ease;
+      }
+      .loading-bar-fill.animating {
+        animation: loading-fill 4s ease-out forwards;
+      }
+      .loading-bar-fill.completing {
+        transition: width 0.5s ease;
+      }
+      @keyframes loading-fill {
+        0%   { width: 0%; }
+        100% { width: 60%; }
       }
       .loading-text {
         margin-top: 12px;
@@ -48,7 +57,7 @@
   <body>
     <div id="loading-screen">
       <div class="loading-bar">
-        <div class="loading-bar-fill"></div>
+        <div class="loading-bar-fill animating"></div>
       </div>
       <p class="loading-text">loading</p>
     </div>
