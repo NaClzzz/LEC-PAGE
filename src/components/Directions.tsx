@@ -97,8 +97,11 @@ export default function Directions() {
           </p>
         </div>
         <div className="hidden lg:block h-[30vh]"></div>
-        <div className="mt-8 lg:hidden bg-[#f3f4f6]">
-          <FlowingMenu items={items} {...menuProps} onItemClick={(item) => setSelectedItem(item as DirectionItem)} />
+        <div className="mt-8 lg:hidden">
+          <p className="text-center text-[11px] text-gray-400 pb-1 uppercase tracking-widest">CLICK THEM ↓</p>
+          <div className="bg-[#f3f4f6]">
+            <FlowingMenu items={items} {...menuProps} onItemClick={(item) => setSelectedItem(item as DirectionItem)} />
+          </div>
         </div>
       </div>
       <div className="hidden lg:block absolute top-0 right-0 bottom-0 left-1/2 bg-[#f3f4f6]">

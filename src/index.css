@@ -10,6 +10,15 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .sm-scope .staggered-menu-header {
+    padding: 1em 1em 2em 1em !important;
+  }
+  .sm-scope .sm-logo,
+  .sm-scope .sm-toggle {
+    background: white !important;
+    border-radius: 9999px !important;
+    padding: 0.4em 0.8em !important;
+  }
   .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img {
     filter: none !important;
   }
