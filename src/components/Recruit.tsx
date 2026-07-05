@@ -3,7 +3,7 @@ import Lanyard from './Lanyard'
 export default function Recruit() {
   const base = import.meta.env.BASE_URL
   return (
-    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-12 sm:pb-16 lg:pb-24 overflow-hidden relative"
+    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-20 sm:pb-16 lg:pb-24 overflow-hidden relative min-h-screen lg:min-h-0 flex flex-col lg:block"
       style={{
         backgroundImage: `
           linear-gradient(to right, rgba(137, 137, 137, 0.1) 1px, transparent 1px),
@@ -17,7 +17,8 @@ export default function Recruit() {
         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage={`${base}card-front.png`} backImage={`${base}card-back.png`} />
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
-      <div className="max-w-[1440px] mx-auto">
+      <div className="flex-1 flex flex-col justify-center lg:block">
+      <div className="max-w-[1440px] mx-auto w-full lg:w-auto">
         <div className="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">
           <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-900 text-white flex items-center justify-center text-[11px] sm:text-[12px] font-semibold">
             4
@@ -27,7 +28,7 @@ export default function Recruit() {
           </span>
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto lg:pl-[40%]">
+      <div className="max-w-[1440px] mx-auto lg:pl-[40%] mt-4 lg:mt-0">
         <div className="px-5 sm:px-8 lg:px-12">
           <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-8 sm:mb-12">
             加入我们,<br />一起用代码创造<br className="hidden sm:inline" />{'{世界}'}
@@ -55,10 +56,8 @@ export default function Recruit() {
           <div className="hidden lg:block h-[15vh]"></div>
         </div>
       </div>
-      <div className="lg:hidden h-[40vh] relative [transform:translateY(40px)]">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage={`${base}card-front.png`} backImage={`${base}card-back.png`} />
-        <p className="absolute bottom-12 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
+      <div className="lg:hidden"></div>
     </section>
   )
 }
