@@ -1,4 +1,4 @@
-import { useEffect, useRef, type FC, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type FC, type ReactNode } from 'react';
 import { gsap } from 'gsap';
 
 interface GridMotionProps {
@@ -11,9 +11,26 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
   const mouseXRef = useRef<number>(window.innerWidth / 2);
 
+  const [colCount, setColCount] = useState(window.innerWidth < 1024 ? 4 : 7)
+  const [rowCount, setRowCount] = useState(window.innerWidth < 1024 ? 7 : 4)
+
   const totalItems = 28;
   const defaultItems = Array.from({ length: totalItems }, (_, index) => `Item ${index + 1}`);
   const combinedItems = items.length > 0 ? items.slice(0, totalItems) : defaultItems;
+
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth < 1024) {
+        setColCount(4)
+        setRowCount(7)
+      } else {
+        setColCount(7)
+        setRowCount(4)
+      }
+    }
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
 
   useEffect(() => {
     gsap.ticker.lagSmoothing(0);
@@ -25,7 +42,7 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
     const updateMotion = (): void => {
       const maxMoveAmount = 300;
       const baseDuration = 0.8;
-      const inertiaFactors = [0.6, 0.4, 0.3, 0.2];
+      const inertiaFactors = [0.6, 0.5, 0.4, 0.35, 0.3, 0.25, 0.2];
 
       rowRefs.current.forEach((row, index) => {
         if (row) {
@@ -60,21 +77,21 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
         }}
       >
         <div className="absolute inset-0 pointer-events-none z-[4] bg-[length:250px]"></div>
-        <div className="gap-4 flex-none relative w-[150vw] h-[150vh] grid grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
-          {Array.from({ length: 4 }, (_, rowIndex) => (
+        <div className="gap-4 flex-none relative w-[200vw] h-[180vh] lg:w-[150vw] lg:h-[150vh] grid grid-rows-7 lg:grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
+          {Array.from({ length: rowCount }, (_, rowIndex) => (
             <div
               key={rowIndex}
-              className="grid gap-4 grid-cols-7"
+              className="grid gap-4 grid-cols-4 lg:grid-cols-7"
               style={{ willChange: 'transform, filter' }}
               ref={el => {
                 if (el) rowRefs.current[rowIndex] = el;
               }}
             >
-              {Array.from({ length: 7 }, (_, itemIndex) => {
-                const content = combinedItems[rowIndex * 7 + itemIndex];
+              {Array.from({ length: colCount }, (_, itemIndex) => {
+                const content = combinedItems[rowIndex * colCount + itemIndex];
                 return (
                   <div key={itemIndex} className="relative">
-                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
+                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111] flex items-center justify-center text-white text-[clamp(0.6rem,2vw,1.5rem)]">
                       {typeof content === 'string' && content.startsWith('http') ? (
                         <div
                           className="w-full h-full bg-cover bg-center absolute top-0 left-0"
