@@ -33,7 +33,17 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
   }, [])
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 1024;
     gsap.ticker.lagSmoothing(0);
+
+    if (isMobile) {
+      rowRefs.current.forEach((row, index) => {
+        if (row) {
+          gsap.set(row, { x: (index % 2 === 0 ? 60 : -60) });
+        }
+      });
+      return;
+    }
 
     const handleMouseMove = (e: MouseEvent): void => {
       mouseXRef.current = e.clientX;
