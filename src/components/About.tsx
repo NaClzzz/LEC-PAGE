@@ -1,13 +1,13 @@
 import Stack from './ui/Stack'
 
-const aboutImages = [
-  { src: '/about3.jpg', alt: 'About LEC 0' },
-  { src: '/about1.jpg', alt: 'About LEC 1' },
-  { src: '/about0.jpg', alt: 'About LEC 2' },
-  { src: '/about2.jpg', alt: 'About LEC 3' },
-]
-
 export default function About() {
+  const base = import.meta.env.BASE_URL
+  const aboutImages = [
+    { src: `${base}about3.jpg`, alt: 'About LEC 0' },
+    { src: `${base}about1.jpg`, alt: 'About LEC 1' },
+    { src: `${base}about0.jpg`, alt: 'About LEC 2' },
+    { src: `${base}about2.jpg`, alt: 'About LEC 3' },
+  ]
   return (
     <section id="about" className="bg-white pt-16 sm:pt-20 lg:pt-32 pb-16 sm:pb-20 lg:pb-44 overflow-hidden min-h-screen"
       style={{

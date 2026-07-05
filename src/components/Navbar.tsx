@@ -13,6 +13,7 @@ const socialItems = [
 ]
 
 export default function Navbar() {
+  const base = import.meta.env.BASE_URL
   return (
     <StaggeredMenu
       position="right"
@@ -20,7 +21,7 @@ export default function Navbar() {
       socialItems={socialItems}
       displaySocials
       displayItemNumbering
-      logoUrl="/favicon.svg"
+      logoUrl={`${base}favicon.svg`}
       logoText="乐程软件工作室"
       menuButtonColor="#111827"
       openMenuButtonColor="#111827"
