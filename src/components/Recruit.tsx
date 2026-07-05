@@ -17,8 +17,8 @@ export default function Recruit() {
         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage={`${base}card-front.png`} backImage={`${base}card-back.png`} />
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
-      <div className="flex-1 flex flex-col justify-center lg:block">
-      <div className="max-w-[1440px] mx-auto w-full lg:w-auto">
+      <div className="flex-1 flex flex-col justify-center lg:block lg:-translate-y-[40px]">
+      <div className="max-w-[1440px] mx-auto w-full lg:w-auto lg:translate-y-[30px]">
         <div className="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">
           <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-900 text-white flex items-center justify-center text-[11px] sm:text-[12px] font-semibold">
             4
@@ -28,7 +28,7 @@ export default function Recruit() {
           </span>
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto lg:pl-[40%] mt-4 lg:mt-0">
+      <div className="max-w-[1440px] mx-auto lg:pl-[40%] -mt-[10px] lg:mt-0">
         <div className="px-5 sm:px-8 lg:px-12">
           <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-8 sm:mb-12">
             加入我们,<br />一起用代码创造<br className="hidden sm:inline" />{'{世界}'}
@@ -42,16 +42,27 @@ export default function Recruit() {
             <br />
             {'我们期待与你一起，在代码的海洋中遨游，用技术创造无限可能，让青春在团队中绽放最耀眼的光芒！'}
           </span>
-          <div className="space-y-3">
-            <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
-              联系方式待定
-            </p>
-            <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
-              邮箱：待定
-            </p>
-            <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
-              地址：待定
-            </p>
+          <div className="space-y-3 mt-8 sm:mt-12">
+            <div className="flex items-start gap-4 flex-col sm:flex-row">
+              <div className="flex-1 space-y-3">
+                <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
+                  招新时间：2026年8月—10月
+                </p>
+                <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
+                  招新对象：全体大一新生
+                </p>
+                <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
+                  团队地址：明理楼C栋 10楼 C1010
+                </p>
+                <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
+                  QQ群号：674764635
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <img src={`${base}qq-qrcode.png`} alt="QQ群二维码" className="w-[120px] sm:w-[140px] rounded-lg" />
+                <p className="text-xs text-gray-400">乐程官方招新群</p>
+              </div>
+            </div>
           </div>
           <div className="hidden lg:block h-[15vh]"></div>
         </div>
