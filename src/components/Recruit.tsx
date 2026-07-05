@@ -13,7 +13,7 @@ export default function Recruit() {
       }}
     >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="/card-front.png" backImage="/card-back.png" />
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
       <div className="max-w-[1440px] mx-auto">
@@ -55,7 +55,7 @@ export default function Recruit() {
         </div>
       </div>
       <div className="lg:hidden h-[40vh] relative [transform:translateY(40px)]">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="/card-front.png" backImage="/card-back.png" />
         <p className="absolute bottom-12 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
     </section>

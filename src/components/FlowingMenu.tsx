@@ -5,6 +5,8 @@ interface MenuItemData {
   link: string
   text: string
   image: string
+  description?: string
+  detailImage?: string
 }
 
 interface FlowingMenuProps {
@@ -15,6 +17,7 @@ interface FlowingMenuProps {
   marqueeBgColor?: string
   marqueeTextColor?: string
   borderColor?: string
+  onItemClick?: (item: MenuItemData, index: number) => void
 }
 
 interface MenuItemProps extends MenuItemData {
@@ -24,6 +27,8 @@ interface MenuItemProps extends MenuItemData {
   marqueeTextColor: string
   borderColor: string
   isFirst: boolean
+  onItemClick?: (item: MenuItemData, index: number) => void
+  index: number
 }
 
 const FlowingMenu: React.FC<FlowingMenuProps> = ({
@@ -33,7 +38,8 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({
   bgColor = '#120F17',
   marqueeBgColor = '#fff',
   marqueeTextColor = '#120F17',
-  borderColor = '#fff'
+  borderColor = '#fff',
+  onItemClick
 }) => {
   return (
     <div className="w-full h-full" style={{ backgroundColor: bgColor }}>
@@ -42,12 +48,14 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({
           <MenuItem
             key={idx}
             {...item}
+            index={idx}
             speed={speed}
             textColor={textColor}
             marqueeBgColor={marqueeBgColor}
             marqueeTextColor={marqueeTextColor}
             borderColor={borderColor}
             isFirst={idx === 0}
+            onItemClick={onItemClick}
           />
         ))}
       </nav>
@@ -59,12 +67,16 @@ const MenuItem: React.FC<MenuItemProps> = ({
   link,
   text,
   image,
+  description,
+  detailImage,
   speed,
   textColor,
   marqueeBgColor,
   marqueeTextColor,
   borderColor,
-  isFirst
+  isFirst,
+  onItemClick,
+  index
 }) => {
   const itemRef = useRef<HTMLDivElement>(null)
   const marqueeRef = useRef<HTMLDivElement>(null)
@@ -160,6 +172,12 @@ const MenuItem: React.FC<MenuItemProps> = ({
         href={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={(e) => {
+          if (onItemClick) {
+            e.preventDefault()
+            onItemClick({ link, text, image, description, detailImage }, index)
+          }
+        }}
         style={{ color: textColor }}
       >
         {text}
