@@ -1,4 +1,11 @@
-import TiltedCard from './TiltedCard'
+import Stack from './ui/Stack'
+
+const aboutImages = [
+  { src: '/about3.jpg', alt: 'About LEC 0' },
+  { src: '/about1.jpg', alt: 'About LEC 1' },
+  { src: '/about0.jpg', alt: 'About LEC 2' },
+  { src: '/about2.jpg', alt: 'About LEC 3' },
+]
 
 export default function About() {
   return (
@@ -38,23 +45,19 @@ export default function About() {
               目前，工作室拥有 40 余名成员，大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。
             </p>
             <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end">
-              <span>About our studio</span>
+              <span>DRUG IT</span>
               <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-45">
                 <span className="text-[#5227FF] text-xs font-bold">&rarr;</span>
               </span>
             </div>
             <div className="aspect-[3/2] rounded-xl sm:rounded-2xl">
-              <TiltedCard
-                imageSrc="/about1.jpg"
-                altText="About LEC Studio"
-                containerHeight="100%"
-                containerWidth="100%"
-                imageHeight="100%"
-                imageWidth="100%"
-                rotateAmplitude={12}
-                scaleOnHover={1.05}
-                showMobileWarning={false}
-                showTooltip={false}
+              <Stack
+                randomRotation={true}
+                sensitivity={180}
+                sendToBackOnClick={true}
+                cards={aboutImages.map((img, i) => (
+                  <img key={i} src={img.src} alt={img.alt} className="w-full h-full object-cover pointer-events-none" />
+                ))}
               />
             </div>
           </div>
@@ -67,24 +70,20 @@ export default function About() {
                 目前，工作室拥有 40 余名成员，大家因对技术的热爱相聚于此，在尊重和包容的团队氛围中，积极分享想法、大胆展现自我，携手攻克一个又一个技术难题。
               </p>
               <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end mt-6">
-                <span>ABOUT US</span>
+                <span>DRUG IT</span>
                 <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-45">
                   <span className="text-[#5227FF] text-xs font-bold">&rarr;</span>
                 </span>
               </div>
             </div>
-            <div className="aspect-[3/2] rounded-2xl">
-              <TiltedCard
-                imageSrc="/about1.jpg"
-                altText="About LEC Studio"
-                containerHeight="100%"
-                containerWidth="100%"
-                imageHeight="100%"
-                imageWidth="100%"
-                rotateAmplitude={12}
-                scaleOnHover={1.05}
-                showMobileWarning={false}
-                showTooltip={false}
+            <div className="aspect-[3/2] rounded-2xl translate-x-[10px] -translate-y-[20px]">
+              <Stack
+                randomRotation={true}
+                sensitivity={180}
+                sendToBackOnClick={true}
+                cards={aboutImages.map((img, i) => (
+                  <img key={i} src={img.src} alt={img.alt} className="w-full h-full object-cover pointer-events-none" />
+                ))}
               />
             </div>
           </div>
