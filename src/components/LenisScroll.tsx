@@ -18,6 +18,17 @@ export default function LenisScroll({ children }: LenisScrollProps) {
 
     lenisRef.current = lenis
 
+    function handleAnchorClick(e: MouseEvent) {
+      const anchor = (e.target as HTMLElement).closest('a[href^="#"]')
+      if (!anchor) return
+      const href = anchor.getAttribute('href')
+      if (!href || href === '#') return
+      e.preventDefault()
+      lenis.scrollTo(href, { duration: 1.5 })
+    }
+
+    document.addEventListener('click', handleAnchorClick)
+
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
@@ -25,6 +36,7 @@ export default function LenisScroll({ children }: LenisScrollProps) {
     requestAnimationFrame(raf)
 
     return () => {
+      document.removeEventListener('click', handleAnchorClick)
       lenis.destroy()
     }
   }, [])
