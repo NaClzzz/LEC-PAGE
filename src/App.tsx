@@ -9,6 +9,12 @@ import Footer from './components/Footer'
 
 export default function App() {
   useEffect(() => {
+    const fill = document.querySelector('.loading-bar-fill') as HTMLElement
+
+    requestAnimationFrame(() => {
+      if (fill) fill.style.width = '55%'
+    })
+
     const minTime = new Promise<void>(r => setTimeout(r, 2000))
     const fontsReady = document.fonts.ready
     const windowLoaded = new Promise<void>(r => {
@@ -17,10 +23,13 @@ export default function App() {
     })
 
     Promise.all([minTime, fontsReady, windowLoaded]).then(() => {
+      if (fill) fill.style.width = '100%'
       const el = document.getElementById('loading-screen')
       if (el) {
-        el.classList.add('fade-out')
-        el.addEventListener('transitionend', () => el.remove(), { once: true })
+        setTimeout(() => {
+          el.classList.add('fade-out')
+          el.addEventListener('transitionend', () => el.remove(), { once: true })
+        }, 900)
       }
     })
   }, [])

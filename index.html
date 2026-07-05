@@ -33,7 +33,7 @@
         width: 0%;
         background: #111827;
         border-radius: 2px;
-        animation: loading-fill 2s ease-in-out infinite;
+        transition: width 0.8s ease;
       }
       .loading-text {
         margin-top: 12px;
@@ -43,12 +43,7 @@
         letter-spacing: 0.15em;
         text-transform: lowercase;
       }
-      @keyframes loading-fill {
-        0%   { width: 0%; }
-        50%  { width: 100%; }
-        100% { width: 0%; }
-      }
-    </style>
+      </style>
   </head>
   <body>
     <div id="loading-screen">
