@@ -99,6 +99,7 @@ export default function Stack({
               src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format"
               alt="card-1"
               className="w-full h-full object-cover pointer-events-none"
+              loading="lazy"
             />
           )
         },
@@ -109,6 +110,7 @@ export default function Stack({
               src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format"
               alt="card-2"
               className="w-full h-full object-cover pointer-events-none"
+              loading="lazy"
             />
           )
         },
@@ -119,6 +121,7 @@ export default function Stack({
               src="https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format"
               alt="card-3"
               className="w-full h-full object-cover pointer-events-none"
+              loading="lazy"
             />
           )
         },
@@ -129,6 +132,7 @@ export default function Stack({
               src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format"
               alt="card-4"
               className="w-full h-full object-cover pointer-events-none"
+              loading="lazy"
             />
           )
         }

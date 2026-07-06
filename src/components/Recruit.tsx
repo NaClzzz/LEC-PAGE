@@ -1,7 +1,6 @@
 import Lanyard from './Lanyard'
 
 export default function Recruit() {
-  const base = import.meta.env.BASE_URL
   return (
     <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-20 sm:pb-16 lg:pb-24 overflow-hidden relative min-h-screen lg:min-h-0 flex flex-col lg:block"
       style={{
@@ -59,7 +58,7 @@ export default function Recruit() {
                 </p>
               </div>
               <div className="flex flex-col items-center gap-1">
-                <img src="https://ik.imagekit.io/Ziro/LEC-PAGE/two-wei-ma/Snipaste_2026-05-28_17-32-57.png" alt="QQ群二维码" className="w-[120px] sm:w-[140px] rounded-lg" />
+                <img src="https://ik.imagekit.io/Ziro/LEC-PAGE/two-wei-ma/Snipaste_2026-05-28_17-32-57.png" alt="QQ群二维码" loading="lazy" className="w-[120px] sm:w-[140px] rounded-lg" />
                 <p className="text-xs text-gray-400">乐程官方招新群</p>
               </div>
             </div>
@@ -68,7 +67,6 @@ export default function Recruit() {
         </div>
       </div>
       </div>
-      <div className="lg:hidden"></div>
     </section>
   )
 }
