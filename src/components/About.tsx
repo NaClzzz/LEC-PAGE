@@ -78,7 +78,7 @@ export default function About() {
                 </span>
               </div>
             </div>
-            <div className="aspect-[3/2] rounded-2xl translate-x-[10px] -translate-y-[5px]">
+            <div className="aspect-[3/2] rounded-2xl translate-x-[10px] -translate-y-[35px]">
               <Stack
                 randomRotation={true}
                 sensitivity={180}

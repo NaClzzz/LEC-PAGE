@@ -14,7 +14,7 @@ export default function Recruit() {
       }}
     >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage={`${base}card-front.png`} backImage={`${base}card-back.png`} />
+        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/222.png" backImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/111.png" />
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
       </div>
       <div className="flex-1 flex flex-col justify-center lg:block">
@@ -59,7 +59,7 @@ export default function Recruit() {
                 </p>
               </div>
               <div className="flex flex-col items-center gap-1">
-                <img src={`${base}qq-qrcode.png`} alt="QQ群二维码" className="w-[120px] sm:w-[140px] rounded-lg" />
+                <img src="https://ik.imagekit.io/Ziro/LEC-PAGE/two-wei-ma/Snipaste_2026-05-28_17-32-57.png" alt="QQ群二维码" className="w-[120px] sm:w-[140px] rounded-lg" />
                 <p className="text-xs text-gray-400">乐程官方招新群</p>
               </div>
             </div>
