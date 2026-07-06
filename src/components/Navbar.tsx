@@ -10,7 +10,7 @@ const menuItems = [
 ]
 
 const socialItems = [
-  { label: 'GitHub', link: 'https://github.com/NaClzzz/LEC-PAGE' },
+  { label: 'GitHub', link: 'https://github.com/lec-org' },
 ]
 
 export default function Navbar() {
