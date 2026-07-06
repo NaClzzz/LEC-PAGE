@@ -56,7 +56,7 @@ export default function About() {
               />
             </div>
             <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end">
-              <span>DRUG IT</span>
+              <span>DRAG IT</span>
 <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-135">
               <span className="text-[#5227FF] text-xs font-bold">&rarr;</span>
             </span>
@@ -68,7 +68,7 @@ export default function About() {
           <div className="flex flex-col justify-between">
 <p className="text-[16px] sm:text-[18px] leading-[1.65] font-medium text-gray-900" dangerouslySetInnerHTML={{ __html: aboutText }} />
               <div className="inline-flex items-center gap-2 bg-[#5227FF] text-white rounded-full px-6 py-3 text-sm font-medium self-end mt-6">
-                <span>DRUG IT</span>
+                <span>DRAG IT</span>
 <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center -rotate-45">
                   <span className="text-[#5227FF] text-xs font-bold">&rarr;</span>
                 </span>

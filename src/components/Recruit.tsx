@@ -14,7 +14,7 @@ export default function Recruit() {
     >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
         <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/222.png" backImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/111.png" />
-        <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRUG IT</p>
+        <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRAG IT</p>
       </div>
       <div className="flex-1 flex flex-col justify-center lg:block">
       <div className="max-w-[1440px] mx-auto w-full lg:w-auto">
