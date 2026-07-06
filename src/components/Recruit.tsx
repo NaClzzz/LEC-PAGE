@@ -54,7 +54,7 @@ export default function Recruit() {
                   团队地址：明理楼C栋 10楼 C1010
                 </p>
                 <p className="text-[15px] sm:text-[17px] leading-[1.65] text-gray-500">
-                  QQ群号：674764635
+                  招新Q群：674764635
                 </p>
               </div>
               <div className="flex flex-col items-center gap-1">

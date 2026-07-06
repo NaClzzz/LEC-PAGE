@@ -1,26 +1,34 @@
 import GridMotion from './GridMotion'
 
 const items = [
-  '国家级奖项 20+',
-  <div key="1" className="text-sm sm:text-2xl font-bold">全国大学生软件大赛</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336219.webp',
+  <div key="1" className="text-sm sm:text-2xl">全国大学生软件大赛</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336211.webp',
   '省级奖项 50+',
-  <div key="2" className="text-sm sm:text-2xl font-bold">挑战杯 金奖</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336212.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336213.webp',
+  <div key="2" className="text-sm sm:text-2xl">挑战杯 金奖</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336214.webp',
   '学术论文 30+ 篇',
-  <div key="3" className="text-sm sm:text-2xl font-bold">CCF 推荐会议</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336208.webp',
+  <div key="3" className="text-sm sm:text-2xl">CCF 推荐会议</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336205.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336210.webp',
   '软件著作权 40+',
-  <div key="4" className="text-sm sm:text-2xl font-bold">ACM-ICPC 区域赛</div>,
-  '！！！这里都是占位符！！！',
-  <div key="5" className="text-sm sm:text-2xl font-bold">互联网+ 省赛一等奖</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336203.webp',
+  <div key="4" className="text-sm sm:text-2xl">ACM-ICPC 区域赛</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336206.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336215.webp',
+  '国家级奖项 20+',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336218.webp',
+  <div key="5" className="text-sm sm:text-2xl">期待你的加入</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336201.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336216.webp',
   '毕业生去向：大厂 80%',
-  <div key="6" className="text-sm sm:text-2xl font-bold">阿里巴巴 / 腾讯 / 字节</div>,
-  '技术分享会 100+ 场',
-  <div key="7" className="text-sm sm:text-2xl font-bold">GitHub 开源项目</div>,
-  'https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  '成员总数 40+',
-  <div key="8" className="text-sm sm:text-2xl font-bold">期待你的加入</div>,
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336204.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336217.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336207.webp',
+  'https://ik.imagekit.io/Ziro/LEC-PAGE/achievements/202407172336220.webp',
 ]
 
 export default function Achievements() {
@@ -38,7 +46,7 @@ export default function Achievements() {
       </div>
       <GridMotion
         items={items}
-        gradientColor="#f3f4f6"
+        gradientColor="#ffffff"
       />
     </section>
   )
