@@ -111,6 +111,9 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
                           <div className="p-4 text-center z-[1] font-medium">{content}</div>
                         )}
                       </div>
+                      <span className="absolute top-1 left-1 z-10 bg-black/60 text-white text-[10px] leading-none rounded-full w-4 h-4 flex items-center justify-center font-mono">
+                        {rowIndex * colCount + itemIndex}
+                      </span>
                     </div>
                 );
               })}
