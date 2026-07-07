@@ -3,6 +3,20 @@ import { useEffect, useRef, useState, type ComponentType } from 'react'
 export default function Recruit() {
   const sectionRef = useRef<HTMLElement>(null)
   const [LanyardComp, setLanyardComp] = useState<ComponentType<Record<string, unknown>> | null>(null)
+  const [lanyardLoading, setLanyardLoading] = useState(false)
+  const retryCount = useRef(0)
+
+  function loadLanyard() {
+    setLanyardLoading(true)
+    import('./Lanyard').then(mod => { setLanyardComp(() => mod.default); setLanyardLoading(false) }).catch(() => {
+      if (retryCount.current < 3) {
+        retryCount.current++
+        setTimeout(loadLanyard, 2000)
+      } else {
+        setLanyardLoading(false)
+      }
+    })
+  }
 
   useEffect(() => {
     const el = sectionRef.current
@@ -10,7 +24,7 @@ export default function Recruit() {
 
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && window.innerWidth >= 1024) {
-        import('./Lanyard').then(mod => setLanyardComp(() => mod.default))
+        loadLanyard()
         observer.disconnect()
       }
     }, { rootMargin: '300px' })
@@ -30,6 +44,7 @@ export default function Recruit() {
       }}
     >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
+        {lanyardLoading && <div className="w-full h-full flex items-center justify-center"><span className="text-xs text-gray-400">Loading...</span></div>}
         {LanyardComp && <LanyardComp position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="https://ziro.oss-cn-shanghai.aliyuncs.com/card/222.webp" backImage="https://ziro.oss-cn-shanghai.aliyuncs.com/card/111.webp" />}
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRAG IT</p>
       </div>
