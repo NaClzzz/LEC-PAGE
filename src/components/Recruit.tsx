@@ -44,7 +44,7 @@ export default function Recruit() {
       }}
     >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
-        {lanyardLoading && <div className="w-full h-full flex items-center justify-center"><span className="text-xs text-gray-400">Loading...</span></div>}
+        {lanyardLoading && <div className="w-full h-full flex items-center justify-center"><span className="text-xs text-gray-400">LOADING...</span></div>}
         {LanyardComp && <LanyardComp position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="https://ziro.oss-cn-shanghai.aliyuncs.com/card/222.webp" backImage="https://ziro.oss-cn-shanghai.aliyuncs.com/card/111.webp" />}
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRAG IT</p>
       </div>
