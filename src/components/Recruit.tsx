@@ -1,8 +1,25 @@
-import Lanyard from './Lanyard'
+import { useEffect, useRef, useState, type ComponentType } from 'react'
 
 export default function Recruit() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [LanyardComp, setLanyardComp] = useState<ComponentType<Record<string, unknown>> | null>(null)
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        import('./Lanyard').then(mod => setLanyardComp(() => mod.default))
+        observer.disconnect()
+      }
+    }, { rootMargin: '300px' })
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
   return (
-    <section id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-20 sm:pb-16 lg:pb-24 overflow-hidden relative min-h-screen lg:min-h-0 flex flex-col lg:block"
+    <section ref={sectionRef} id="recruit" className="bg-white pt-8 sm:pt-10 lg:pt-20 pb-20 sm:pb-16 lg:pb-24 overflow-hidden relative min-h-screen lg:min-h-0 flex flex-col lg:block"
       style={{
         backgroundImage: `
           linear-gradient(to right, rgba(137, 137, 137, 0.1) 1px, transparent 1px),
@@ -13,7 +30,7 @@ export default function Recruit() {
       }}
     >
 <div className="hidden lg:block absolute top-0 right-[40%] bottom-0 left-0 [transform:translateY(-80px)_translateX(20px)]">
-        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/222.png" backImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/111.png" />
+        {LanyardComp && <LanyardComp position={[0, 0, 20]} gravity={[0, -40, 0]} frontImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/222.png" backImage="https://ik.imagekit.io/Ziro/LEC-PAGE/card/111.png" />}
         <p className="absolute bottom-50 left-1/2 -translate-x-1/2 text-xs text-gray-400">↑ DRAG IT</p>
       </div>
       <div className="flex-1 flex flex-col justify-center lg:block">

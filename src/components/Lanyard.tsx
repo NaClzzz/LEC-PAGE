@@ -14,7 +14,6 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 import * as THREE from 'three'
 
-import cardGLB from '../assets/lanyard/card.glb'
 import lanyard from '../assets/lanyard/lanyard.png'
 
 extend({ MeshLineGeometry, MeshLineMaterial })
@@ -170,7 +169,7 @@ function Band({
     return body.lerped
   }
 
-  const { nodes, materials } = useGLTF(cardGLB) as any
+  const { nodes, materials } = useGLTF(import.meta.env.BASE_URL + 'card.glb') as any
   const texture = useTexture(lanyardImage || lanyard)
   const frontTex = useTexture(frontImage || BLANK_PIXEL)
   const backTex = useTexture(backImage || BLANK_PIXEL)
