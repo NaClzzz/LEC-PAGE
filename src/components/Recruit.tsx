@@ -9,7 +9,7 @@ export default function Recruit() {
     if (!el) return
 
     const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
+      if (entries[0].isIntersecting && window.innerWidth >= 1024) {
         import('./Lanyard').then(mod => setLanyardComp(() => mod.default))
         observer.disconnect()
       }
