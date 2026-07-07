@@ -36,7 +36,7 @@ export default function About() {
         {/* Heading */}
         <div className="px-5 sm:px-8 lg:px-12">
           <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-10 sm:mb-14 lg:mb-20">
-            乐程，乐在探索，程向未来
+            乐程，有温度更有实力
           </h2>
         </div>
 
