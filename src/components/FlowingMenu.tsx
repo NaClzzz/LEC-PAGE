@@ -18,6 +18,7 @@ interface FlowingMenuProps {
   marqueeTextColor?: string
   borderColor?: string
   onItemClick?: (item: MenuItemData, index: number) => void
+  activeIndex?: number
 }
 
 interface MenuItemProps extends MenuItemData {
@@ -29,6 +30,7 @@ interface MenuItemProps extends MenuItemData {
   isFirst: boolean
   onItemClick?: (item: MenuItemData, index: number) => void
   index: number
+  activeIndex?: number
 }
 
 const FlowingMenu: React.FC<FlowingMenuProps> = ({
@@ -39,7 +41,8 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({
   marqueeBgColor = '#fff',
   marqueeTextColor = '#120F17',
   borderColor = '#fff',
-  onItemClick
+  onItemClick,
+  activeIndex
 }) => {
   return (
     <div className="w-full h-full" style={{ backgroundColor: bgColor }}>
@@ -56,6 +59,7 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({
             borderColor={borderColor}
             isFirst={idx === 0}
             onItemClick={onItemClick}
+            activeIndex={activeIndex}
           />
         ))}
       </nav>
@@ -76,12 +80,14 @@ const MenuItem: React.FC<MenuItemProps> = ({
   borderColor,
   isFirst,
   onItemClick,
-  index
+  index,
+  activeIndex
 }) => {
   const itemRef = useRef<HTMLDivElement>(null)
   const marqueeRef = useRef<HTMLDivElement>(null)
   const marqueeInnerRef = useRef<HTMLDivElement>(null)
   const animationRef = useRef<gsap.core.Tween | null>(null)
+  const prevActiveRef = useRef(activeIndex)
   const [repetitions, setRepetitions] = useState(4)
 
   const animationDefaults = { duration: 0.6, ease: 'expo' }
@@ -137,6 +143,26 @@ const MenuItem: React.FC<MenuItemProps> = ({
       }
     }
   }, [text, image, repetitions, speed])
+
+  useEffect(() => {
+    if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return
+    const isActive = activeIndex === index
+    const wasActive = prevActiveRef.current === index
+    prevActiveRef.current = activeIndex
+
+    if (isActive && !wasActive) {
+      gsap
+        .timeline({ defaults: animationDefaults })
+        .set(marqueeRef.current, { y: '101%' }, 0)
+        .set(marqueeInnerRef.current, { y: '-101%' }, 0)
+        .to([marqueeRef.current, marqueeInnerRef.current], { y: '0%' }, 0)
+    } else if (!isActive && wasActive) {
+      gsap
+        .timeline({ defaults: animationDefaults })
+        .to(marqueeRef.current, { y: '101%' }, 0)
+        .to(marqueeInnerRef.current, { y: '-101%' }, 0)
+    }
+  }, [activeIndex, index])
 
   const handleMouseEnter = (ev: React.MouseEvent<HTMLAnchorElement>) => {
     if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return

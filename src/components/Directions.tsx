@@ -65,10 +65,12 @@ const menuProps = {
 
 export default function Directions() {
   const [selectedItem, setSelectedItem] = useState<DirectionItem | null>(null)
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [closing, setClosing] = useState(false)
 
   const handleClose = useCallback(() => {
     setClosing(true)
+    setSelectedIndex(null)
     setTimeout(() => {
       setSelectedItem(null)
       setClosing(false)
@@ -100,13 +102,19 @@ export default function Directions() {
         <div className="mt-8 lg:hidden">
           <p className="text-center text-[11px] text-gray-400 pb-1 uppercase tracking-widest">CLICK THEM ↓</p>
           <div className="bg-[#f3f4f6]">
-            <FlowingMenu items={items} {...menuProps} onItemClick={(item) => setSelectedItem(item as DirectionItem)} />
+            <FlowingMenu items={items} {...menuProps} activeIndex={selectedIndex ?? -1} onItemClick={(item, index) => {
+              setSelectedItem(item as DirectionItem)
+              setSelectedIndex(index)
+            }} />
           </div>
         </div>
       </div>
       <div className="hidden lg:block absolute top-0 right-0 bottom-0 left-1/2 bg-[#f3f4f6]">
         <span className="absolute -left-16 top-1/2 -translate-y-1/2 rotate-90 text-[11px] text-gray-400 whitespace-nowrap pointer-events-none select-none uppercase tracking-widest">click them ↑</span>
-        <FlowingMenu items={items} {...menuProps} onItemClick={(item) => setSelectedItem(item as DirectionItem)} />
+        <FlowingMenu items={items} {...menuProps} activeIndex={selectedIndex ?? -1} onItemClick={(item, index) => {
+          setSelectedItem(item as DirectionItem)
+          setSelectedIndex(index)
+        }} />
       </div>
 
       {selectedItem && (
