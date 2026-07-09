@@ -61,7 +61,7 @@ export default function Recruit() {
       </div>
       <div className="max-w-[1440px] mx-auto lg:pl-[40%] -mt-[10px] lg:-mt-[60px]">
         <div className="px-5 sm:px-8 lg:px-12">
-          <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-8 sm:mb-12">
+          <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-8 sm:mb-12 [-webkit-text-stroke:0.2px_currentColor] sm:[-webkit-text-stroke:0px]">
             加入我们,<br />一起用代码创造<br className="hidden sm:inline" />{'{世界}'}
           </h2>
           <span className="text-[15px] sm:text-[17px] leading-[1.65] font-medium text-gray-900 mb-6">

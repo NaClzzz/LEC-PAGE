@@ -89,7 +89,7 @@ export default function Directions() {
           </span>
         </div>
         <div className="px-5 sm:px-8 lg:px-12">
-          <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-8 sm:mb-12">
+          <h2 className="text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 mb-8 sm:mb-12 [-webkit-text-stroke:0.2px_currentColor] sm:[-webkit-text-stroke:0px]">
             每一次选择，<br /><span className="whitespace-nowrap">都通向不同的未来</span>
           </h2>
         </div>

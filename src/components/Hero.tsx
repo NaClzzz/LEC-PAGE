@@ -11,7 +11,7 @@ export default function Hero() {
       </Shader>
 
       <div className="absolute top-20 right-5 sm:right-8 lg:right-12 text-right select-none pointer-events-none">
-        <span className="text-[clamp(2.5rem,10vw,7rem)] font-medium leading-[1.08] tracking-tight text-gray-900 whitespace-nowrap">
+        <span className="text-[clamp(2.5rem,10vw,7rem)] font-medium leading-[1.08] tracking-tight text-gray-900 whitespace-nowrap [-webkit-text-stroke:0.2px_currentColor] sm:[-webkit-text-stroke:0px]">
           乐程软件工作室
         </span>
         <p className="text-[13px] font-medium sm:text-[14px] text-gray-900 tracking-wide mt-3">
@@ -26,7 +26,7 @@ export default function Hero() {
           LEC SOFTWARE STUDIO
         </p>
 
-        <h1 className="text-[clamp(2.5rem,10vw,7rem)] font-medium leading-[1.08] tracking-tight text-gray-900">
+        <h1 className="text-[clamp(2.5rem,10vw,7rem)] font-medium leading-[1.08] tracking-tight text-gray-900 [-webkit-text-stroke:0.2px_currentColor] sm:[-webkit-text-stroke:0px]">
           加入我们<br />
           一起用代码创造<br className="sm:hidden" />{'{世界}'}
         </h1>
