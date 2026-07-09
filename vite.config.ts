@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: process.env.VERCEL ? '/' : '/LEC-PAGE/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   assetsInclude: ['**/*.glb'],
 })
